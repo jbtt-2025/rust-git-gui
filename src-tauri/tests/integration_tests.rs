@@ -22,6 +22,12 @@ fn temp_dir() -> TempDir {
 fn init_repo_with_commit(dir: &Path) -> GitRepository {
     {
         let raw = git2::Repository::init(dir).expect("git2 init");
+
+        // Set local git config so signature() works without global config (CI)
+        let mut config = raw.config().unwrap();
+        config.set_str("user.name", "Test User").unwrap();
+        config.set_str("user.email", "test@example.com").unwrap();
+
         let sig = git2::Signature::now("Test User", "test@example.com").unwrap();
         fs::write(dir.join("README.md"), "# Test Repo\n").expect("write");
         let mut index = raw.index().unwrap();
@@ -39,6 +45,12 @@ fn init_repo_with_commit(dir: &Path) -> GitRepository {
 /// Add a file and create a commit using git2 directly.
 fn add_file_and_commit_raw(dir: &Path, filename: &str, content: &str, message: &str) {
     let raw = git2::Repository::open(dir).expect("open raw");
+
+    // Ensure local config exists (needed for CI without global git config)
+    let mut config = raw.config().unwrap();
+    config.set_str("user.name", "Test User").ok();
+    config.set_str("user.email", "test@example.com").ok();
+
     let sig = git2::Signature::now("Test User", "test@example.com").unwrap();
     fs::write(dir.join(filename), content).expect("write");
     let mut index = raw.index().unwrap();

@@ -51,8 +51,14 @@ describe('Property 20: Sidebar search filter correctness', () => {
         fc.string({ maxLength: 20 }),
         (items, query) => {
           const result = filterByName(items, query, (i) => i.name);
-          const lower = query.toLowerCase();
 
+          // filterByName treats whitespace-only queries as "no filter"
+          if (!query.trim()) {
+            expect(result.length).toBe(items.length);
+            return;
+          }
+
+          const lower = query.toLowerCase();
           const expected = items.filter((i) => i.name.toLowerCase().includes(lower));
           expect(result.length).toBe(expected.length);
         },
