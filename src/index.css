@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-code-family: monospace;
+  --font-code-size: 14px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code,
+pre,
+.code-font {
+  font-family: var(--font-code-family);
+  font-size: var(--font-code-size);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+
+/* ── App Layout ── */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-empty {
+  align-items: center;
+  justify-content: center;
+}
+
+.app-tabbar {
+  flex-shrink: 0;
+}
+
+.app-toolbar {
+  flex-shrink: 0;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.app-body > .sidebar {
+  flex-shrink: 0;
+  width: 260px;
+  overflow-y: auto;
+  border-right: 1px solid var(--color-border, #333);
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.app-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.app-view-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border, #333);
+  flex-shrink: 0;
+}
+
+.app-view-tab {
+  padding: 6px 16px;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-text-secondary, #999);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.app-view-tab:hover {
+  color: var(--color-text-primary, #fff);
+}
+
+.app-view-tab--active {
+  color: var(--color-text-primary, #fff);
+  border-bottom-color: var(--color-accent, #58a6ff);
+}
+
+.app-view-content {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+.app-staging-area {
+  flex-shrink: 0;
+  border-top: 1px solid var(--color-border, #333);
+  max-height: 40vh;
+  overflow-y: auto;
+  display: flex;
+  gap: 0;
+}
+
+.app-staging-area > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-terminal {
+  flex-shrink: 0;
+  border-top: 1px solid var(--color-border, #333);
+  height: 200px;
+}

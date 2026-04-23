@@ -1,0 +1,268 @@
+{
+  "app": {
+    "title": "Git GUI",
+    "openRepo": "リポジトリを開いて始めましょう"
+  },
+  "views": {
+    "graph": "グラフ",
+    "diff": "差分",
+    "blame": "Blame",
+    "tree": "ツリー"
+  },
+  "sidebar": {
+    "local": "ローカル",
+    "remotes": "リモート",
+    "stashes": "スタッシュ",
+    "tags": "タグ",
+    "submodules": "サブモジュール",
+    "worktrees": "ワークツリー",
+    "search": "検索...",
+    "newBranchName": "新しいブランチ名を入力してください：",
+    "newSubmoduleUrl": "新しいサブモジュールURLを入力してください："
+  },
+  "repo": {
+    "open": "リポジトリを開く",
+    "clone": "リポジトリをクローン",
+    "init": "リポジトリを初期化",
+    "recent": "最近のリポジトリ",
+    "notGit": "Git リポジトリではありません"
+  },
+  "commit": {
+    "title": "コミット",
+    "message": "コミットメッセージ",
+    "amend": "修正コミット",
+    "emptyStaging": "ステージングエリアに変更がありません",
+    "titleTooLong": "タイトルが72文字を超えています",
+    "template": "テンプレート"
+  },
+  "branch": {
+    "create": "ブランチを作成",
+    "delete": "ブランチを削除",
+    "rename": "ブランチ名を変更",
+    "checkout": "チェックアウト",
+    "setUpstream": "上流ブランチを設定",
+    "merge": "マージ",
+    "deleteUnmergedWarning": "このブランチはマージされていません。強制削除しますか？"
+  },
+  "tag": {
+    "create": "タグを作成",
+    "createAnnotated": "注釈付きタグを作成",
+    "delete": "タグを削除",
+    "pushToRemote": "タグをリモートにプッシュ",
+    "copyName": "タグ名をコピー"
+  },
+  "remote": {
+    "fetch": "フェッチ",
+    "pull": "プル",
+    "push": "プッシュ",
+    "forcePush": "強制プッシュ",
+    "pullThenPush": "プルしてからプッシュ",
+    "add": "リモートを追加",
+    "remove": "リモートを削除"
+  },
+  "diff": {
+    "split": "分割ビュー",
+    "inline": "インラインビュー",
+    "ignoreWhitespace": "空白を無視",
+    "noChanges": "変更なし",
+    "binaryFile": "バイナリファイルが変更されました",
+    "findPlaceholder": "差分内を検索...",
+    "previousMatch": "前の一致",
+    "nextMatch": "次の一致",
+    "overlay": "オーバーレイ",
+    "oldVersion": "旧",
+    "newVersion": "新"
+  },
+  "staging": {
+    "staged": "ステージ済みの変更",
+    "unstaged": "未ステージの変更",
+    "stage": "ステージ",
+    "unstage": "アンステージ",
+    "discard": "変更を破棄",
+    "stageAll": "すべてステージ",
+    "unstageAll": "すべてアンステージ"
+  },
+  "stash": {
+    "create": "変更をスタッシュ",
+    "apply": "スタッシュを適用",
+    "pop": "スタッシュをポップ",
+    "drop": "スタッシュを削除",
+    "description": "スタッシュの説明"
+  },
+  "rebase": {
+    "start": "リベース",
+    "continue": "リベースを続行",
+    "abort": "リベースを中止",
+    "progress": "ステップ {{current}} / {{total}}"
+  },
+  "conflict": {
+    "title": "コンフリクト解決",
+    "resolved": "解決済みにする",
+    "ours": "ローカル",
+    "theirs": "リモート",
+    "merge": "マージ結果"
+  },
+  "search": {
+    "placeholder": "コミットを検索...",
+    "byAuthor": "作者で検索",
+    "byDate": "日付範囲で検索",
+    "byFile": "ファイルパスで検索",
+    "byHash": "コミットハッシュで検索"
+  },
+  "undo": {
+    "undo": "元に戻す",
+    "redo": "やり直す"
+  },
+  "reset": {
+    "soft": "ソフトリセット",
+    "mixed": "ミックスリセット",
+    "hard": "ハードリセット",
+    "hardWarning": "ハードリセットはコミットされていない変更をすべて破棄します。続行しますか？"
+  },
+  "cherryPick": {
+    "title": "チェリーピック"
+  },
+  "revert": {
+    "title": "リバート"
+  },
+  "worktree": {
+    "create": "ワークツリーを作成",
+    "delete": "ワークツリーを削除",
+    "main": "（メイン）"
+  },
+  "submodule": {
+    "init": "初期化",
+    "update": "更新",
+    "deinit": "初期化解除",
+    "open": "開く",
+    "copyPath": "パスをコピー",
+    "changeUrl": "URLを変更",
+    "updateAll": "すべてのサブモジュールを更新",
+    "updateBanner": "プル後にサブモジュール参照が変更されました。",
+    "updateBannerAction": "すべて更新",
+    "dismiss": "閉じる",
+    "cloneRecursive": "サブモジュールを再帰的にクローン",
+    "openInNewTab": "新しいタブで開く",
+    "updating": "サブモジュールを更新中..."
+  },
+  "terminal": {
+    "title": "ターミナル",
+    "show": "ターミナルを表示",
+    "hide": "ターミナルを非表示"
+  },
+  "settings": {
+    "title": "設定",
+    "theme": "テーマ",
+    "themeDark": "ダーク",
+    "themeLight": "ライト",
+    "themeSystem": "システムに従う",
+    "language": "言語",
+    "font": "フォント",
+    "fontSize": "フォントサイズ",
+    "hotkeys": "キーボードショートカット",
+    "appearance": "外観",
+    "shortcuts": "キーボードショートカット",
+    "gitConfig": "Git 設定",
+    "templates": "コミットテンプレート",
+    "userName": "ユーザー名",
+    "userEmail": "メールアドレス",
+    "defaultBranch": "デフォルトブランチ",
+    "mergeStrategy": "マージ戦略",
+    "configLevel": "設定レベル",
+    "local": "ローカル",
+    "global": "グローバル",
+    "addTemplate": "テンプレートを追加",
+    "templateName": "テンプレート名",
+    "templateContent": "テンプレート内容",
+    "recording": "キーの組み合わせを押してください...",
+    "hotkeyConflict": "このショートカットは「{{action}}」で使用されています"
+  },
+  "contextMenu": {
+    "copyCommitSha": "コミットSHAをコピー",
+    "copyBranchName": "ブランチ名をコピー",
+    "copyLinkToBranch": "リモートブランチのリンクをコピー",
+    "copyLinkToCommit": "リモートコミットのリンクをコピー",
+    "createPatch": "パッチを作成",
+    "hide": "非表示",
+    "pinToLeft": "左に固定",
+    "solo": "ソロ"
+  },
+  "blame": {
+    "noData": "Blameデータがありません",
+    "timeline": "タイムライン",
+    "toggleTimeline": "タイムラインビューを切り替え"
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "close": "閉じる",
+    "save": "保存",
+    "delete": "削除",
+    "error": "エラー",
+    "loading": "読み込み中..."
+  },
+  "treeBrowser": {
+    "title": "ファイルツリー",
+    "search": "ファイルを検索...",
+    "viewBlame": "Blameを表示",
+    "viewHistory": "履歴を表示",
+    "copyPath": "パスをコピー",
+    "noContent": "ファイルを選択して内容を表示",
+    "loading": "読み込み中..."
+  },
+  "tabBar": {
+    "closeTab": "タブを閉じる",
+    "unsavedChanges": "未コミットの変更があります"
+  },
+  "dragDrop": {
+    "merge": "マージ",
+    "rebase": "リベース",
+    "cherryPick": "チェリーピック",
+    "push": "リモートにプッシュ",
+    "dropHere": "ここにドロップ"
+  },
+  "toolbar": {
+    "undo": "元に戻す",
+    "redo": "やり直す",
+    "undoAction": "元に戻す：{{action}}",
+    "redoAction": "やり直す：{{action}}",
+    "toggleTerminal": "ターミナルの表示切替",
+    "toggleFullscreen": "全画面の切替",
+    "pushRejected": "プッシュが拒否されました",
+    "pushRejectedDesc": "リモートブランチに新しいコミットがあります。操作を選択してください：",
+    "pullThenPush": "プルしてからプッシュ",
+    "forcePush": "強制プッシュ",
+    "hardResetTitle": "ハードリセット",
+    "hardResetDesc": "ハードリセットはコミットされていない変更をすべて破棄します。続行しますか？",
+    "deleteUnmergedTitle": "ブランチを削除",
+    "deleteUnmergedDesc": "このブランチはマージされていません。強制削除しますか？"
+  },
+  "hostIntegration": {
+    "title": "ホスト連携",
+    "platform": "プラットフォーム",
+    "github": "GitHub",
+    "gitlab": "GitLab",
+    "token": "パーソナルアクセストークン",
+    "authenticate": "認証",
+    "authenticated": "認証済み",
+    "notAuthenticated": "未認証",
+    "logout": "ログアウト",
+    "pullRequests": "プルリクエスト",
+    "noPullRequests": "プルリクエストが見つかりません",
+    "createPr": "プルリクエストを作成",
+    "prTitle": "タイトル",
+    "prDescription": "説明",
+    "sourceBranch": "ソースブランチ",
+    "targetBranch": "ターゲットブランチ",
+    "create": "作成",
+    "creating": "作成中...",
+    "open": "オープン",
+    "closed": "クローズ",
+    "merged": "マージ済み",
+    "refreshPrs": "更新",
+    "loadingPrs": "読み込み中...",
+    "authError": "認証に失敗しました",
+    "prCreateError": "プルリクエストの作成に失敗しました",
+    "prListError": "プルリクエストの読み込みに失敗しました"
+  }
+}

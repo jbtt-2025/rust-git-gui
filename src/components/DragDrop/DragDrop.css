@@ -1,0 +1,63 @@
+/* ===== Branch Drag-and-Drop ===== */
+
+/* Drop target wrapper */
+.branch-drop-target {
+  transition: background 0.15s ease, border-color 0.15s ease;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+/* Dragging source — semi-transparent */
+.branch-drop-target--dragging {
+  opacity: 0.5;
+}
+
+/* Valid drop target highlight */
+.branch-drop-target--over {
+  background: var(--color-bg-hover);
+  border-color: var(--color-accent);
+}
+
+/* ===== Drag Action Menu ===== */
+
+.drag-action-menu {
+  min-width: 180px;
+  padding: 4px;
+  border-radius: 6px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.drag-action-menu-header {
+  padding: 6px 10px 4px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.drag-action-menu-label {
+  font-weight: 600;
+}
+
+.drag-action-menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.drag-action-menu-item:hover {
+  background: var(--color-bg-hover);
+}

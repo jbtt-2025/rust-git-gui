@@ -1,0 +1,139 @@
+/* CommitGraph container */
+.commit-graph-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.commit-graph-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--color-border);
+  min-height: 32px;
+}
+
+.commit-graph-reset-btn {
+  padding: 4px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.commit-graph-reset-btn:hover {
+  background: var(--color-bg-active);
+}
+
+.commit-graph-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.commit-graph-canvas {
+  display: block;
+  cursor: pointer;
+}
+
+/* Commit detail panel */
+.commit-detail {
+  border-top: 1px solid var(--color-border);
+  padding: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--color-bg-secondary);
+}
+
+.commit-detail-loading {
+  padding: 12px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.commit-detail-header {
+  margin-bottom: 8px;
+}
+
+.commit-detail-message {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: pre-wrap;
+  margin-bottom: 6px;
+}
+
+.commit-detail-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  flex-wrap: wrap;
+}
+
+.commit-detail-sha {
+  font-family: var(--font-code-family);
+  color: var(--color-accent);
+}
+
+.commit-detail-cherry-pick {
+  font-size: 14px;
+}
+
+.commit-detail-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.commit-detail-insertions {
+  color: var(--color-success);
+}
+
+.commit-detail-deletions {
+  color: var(--color-error);
+}
+
+.commit-detail-files {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.commit-detail-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+  font-size: 13px;
+}
+
+.commit-detail-file-status {
+  font-family: var(--font-code-family);
+  font-size: 11px;
+  font-weight: 600;
+  width: 16px;
+  text-align: center;
+}
+
+.commit-detail-file-status--modified { color: var(--color-warning); }
+.commit-detail-file-status--staged { color: var(--color-success); }
+.commit-detail-file-status--untracked { color: var(--color-text-muted); }
+.commit-detail-file-status--deleted { color: var(--color-error); }
+.commit-detail-file-status--renamed { color: var(--color-info); }
+.commit-detail-file-status--conflict { color: var(--color-error); }
+
+.commit-detail-file-path {
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

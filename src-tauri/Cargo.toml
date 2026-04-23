@@ -1,0 +1,29 @@
+[package]
+name = "git-gui"
+version = "0.1.0"
+description = "A cross-platform Git GUI client"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "git_gui_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+git2 = "0.19"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+notify = "6"
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["full"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+
+[dev-dependencies]
+proptest = "1"
+tempfile = "3"

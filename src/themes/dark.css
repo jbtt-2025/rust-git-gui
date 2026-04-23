@@ -1,0 +1,33 @@
+[data-theme='dark'] {
+  --color-bg-primary: #1e1e2e;
+  --color-bg-secondary: #181825;
+  --color-bg-tertiary: #11111b;
+  --color-bg-hover: #313244;
+  --color-bg-active: #45475a;
+
+  --color-text-primary: #cdd6f4;
+  --color-text-secondary: #a6adc8;
+  --color-text-muted: #6c7086;
+
+  --color-border: #313244;
+  --color-border-active: #585b70;
+
+  --color-accent: #89b4fa;
+  --color-accent-hover: #74c7ec;
+
+  --color-success: #a6e3a1;
+  --color-warning: #f9e2af;
+  --color-error: #f38ba8;
+  --color-info: #89dceb;
+
+  --color-diff-add-bg: rgba(166, 227, 161, 0.12);
+  --color-diff-add-text: #a6e3a1;
+  --color-diff-del-bg: rgba(243, 139, 168, 0.12);
+  --color-diff-del-text: #f38ba8;
+  --color-diff-hunk-bg: rgba(137, 180, 250, 0.08);
+
+  --color-scrollbar: #45475a;
+  --color-scrollbar-hover: #585b70;
+
+  color-scheme: dark;
+}

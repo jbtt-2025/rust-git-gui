@@ -1,0 +1,44 @@
+/* Context menu backdrop */
+.context-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+/* Commit context menu positioning */
+.commit-context-menu {
+  position: fixed;
+  z-index: 100;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.commit-context-menu .context-menu-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+}
+
+.commit-context-menu .context-menu-item:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Submenu */
+.context-menu-submenu {
+  position: relative;
+}
+
+.context-menu-submenu-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 160px;
+}
+
+.context-menu-submenu:hover .context-menu-submenu-content {
+  display: block;
+}

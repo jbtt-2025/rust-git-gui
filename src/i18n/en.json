@@ -1,0 +1,268 @@
+{
+  "app": {
+    "title": "Git GUI",
+    "openRepo": "Open a repository to get started"
+  },
+  "views": {
+    "graph": "Graph",
+    "diff": "Diff",
+    "blame": "Blame",
+    "tree": "Tree"
+  },
+  "sidebar": {
+    "local": "LOCAL",
+    "remotes": "REMOTES",
+    "stashes": "STASHES",
+    "tags": "TAGS",
+    "submodules": "SUBMODULES",
+    "worktrees": "WORKTREES",
+    "search": "Search...",
+    "newBranchName": "Enter new branch name:",
+    "newSubmoduleUrl": "Enter new submodule URL:"
+  },
+  "repo": {
+    "open": "Open Repository",
+    "clone": "Clone Repository",
+    "init": "Initialize Repository",
+    "recent": "Recent Repositories",
+    "notGit": "Not a Git repository"
+  },
+  "commit": {
+    "title": "Commit",
+    "message": "Commit message",
+    "amend": "Amend",
+    "emptyStaging": "No changes staged for commit",
+    "titleTooLong": "Title exceeds 72 characters",
+    "template": "Templates"
+  },
+  "branch": {
+    "create": "Create Branch",
+    "delete": "Delete Branch",
+    "rename": "Rename Branch",
+    "checkout": "Checkout",
+    "setUpstream": "Set Upstream",
+    "merge": "Merge",
+    "deleteUnmergedWarning": "This branch has not been merged. Force delete?"
+  },
+  "tag": {
+    "create": "Create Tag",
+    "createAnnotated": "Create Annotated Tag",
+    "delete": "Delete Tag",
+    "pushToRemote": "Push Tag to Remote",
+    "copyName": "Copy Tag Name"
+  },
+  "remote": {
+    "fetch": "Fetch",
+    "pull": "Pull",
+    "push": "Push",
+    "forcePush": "Force Push",
+    "pullThenPush": "Pull then Push",
+    "add": "Add Remote",
+    "remove": "Remove Remote"
+  },
+  "diff": {
+    "split": "Split View",
+    "inline": "Inline View",
+    "ignoreWhitespace": "Ignore Whitespace",
+    "noChanges": "No changes",
+    "binaryFile": "Binary file changed",
+    "findPlaceholder": "Find in diff...",
+    "previousMatch": "Previous match",
+    "nextMatch": "Next match",
+    "overlay": "Overlay",
+    "oldVersion": "Old",
+    "newVersion": "New"
+  },
+  "staging": {
+    "staged": "Staged Changes",
+    "unstaged": "Unstaged Changes",
+    "stage": "Stage",
+    "unstage": "Unstage",
+    "discard": "Discard Changes",
+    "stageAll": "Stage All",
+    "unstageAll": "Unstage All"
+  },
+  "stash": {
+    "create": "Stash Changes",
+    "apply": "Apply Stash",
+    "pop": "Pop Stash",
+    "drop": "Drop Stash",
+    "description": "Stash description"
+  },
+  "rebase": {
+    "start": "Rebase",
+    "continue": "Continue Rebase",
+    "abort": "Abort Rebase",
+    "progress": "Step {{current}} of {{total}}"
+  },
+  "conflict": {
+    "title": "Conflict Resolution",
+    "resolved": "Mark as Resolved",
+    "ours": "Ours",
+    "theirs": "Theirs",
+    "merge": "Merge Result"
+  },
+  "search": {
+    "placeholder": "Search commits...",
+    "byAuthor": "By Author",
+    "byDate": "By Date Range",
+    "byFile": "By File Path",
+    "byHash": "By Commit Hash"
+  },
+  "undo": {
+    "undo": "Undo",
+    "redo": "Redo"
+  },
+  "reset": {
+    "soft": "Soft Reset",
+    "mixed": "Mixed Reset",
+    "hard": "Hard Reset",
+    "hardWarning": "Hard reset will discard all uncommitted changes. Continue?"
+  },
+  "cherryPick": {
+    "title": "Cherry Pick"
+  },
+  "revert": {
+    "title": "Revert"
+  },
+  "worktree": {
+    "create": "Create Worktree",
+    "delete": "Delete Worktree",
+    "main": "(main)"
+  },
+  "submodule": {
+    "init": "Initialize",
+    "update": "Update",
+    "deinit": "Deinitialize",
+    "open": "Open",
+    "copyPath": "Copy Path",
+    "changeUrl": "Change URL",
+    "updateAll": "Update All Submodules",
+    "updateBanner": "Submodule references changed after pull.",
+    "updateBannerAction": "Update All",
+    "dismiss": "Dismiss",
+    "cloneRecursive": "Clone submodules recursively",
+    "openInNewTab": "Open in New Tab",
+    "updating": "Updating submodules..."
+  },
+  "terminal": {
+    "title": "Terminal",
+    "show": "Show Terminal",
+    "hide": "Hide Terminal"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Theme",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "themeSystem": "System",
+    "language": "Language",
+    "font": "Font",
+    "fontSize": "Font Size",
+    "hotkeys": "Keyboard Shortcuts",
+    "appearance": "Appearance",
+    "shortcuts": "Keyboard Shortcuts",
+    "gitConfig": "Git Configuration",
+    "templates": "Commit Templates",
+    "userName": "User Name",
+    "userEmail": "User Email",
+    "defaultBranch": "Default Branch",
+    "mergeStrategy": "Merge Strategy",
+    "configLevel": "Config Level",
+    "local": "Local",
+    "global": "Global",
+    "addTemplate": "Add Template",
+    "templateName": "Template Name",
+    "templateContent": "Template Content",
+    "recording": "Press a key combination...",
+    "hotkeyConflict": "This shortcut is already used by \"{{action}}\""
+  },
+  "contextMenu": {
+    "copyCommitSha": "Copy Commit SHA",
+    "copyBranchName": "Copy Branch Name",
+    "copyLinkToBranch": "Copy Link to Branch on Remote",
+    "copyLinkToCommit": "Copy Link to Commit on Remote",
+    "createPatch": "Create Patch",
+    "hide": "Hide",
+    "pinToLeft": "Pin to Left",
+    "solo": "Solo"
+  },
+  "blame": {
+    "noData": "No blame data available",
+    "timeline": "Timeline",
+    "toggleTimeline": "Toggle timeline view"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "error": "Error",
+    "loading": "Loading..."
+  },
+  "treeBrowser": {
+    "title": "File Tree",
+    "search": "Filter files...",
+    "viewBlame": "View Blame",
+    "viewHistory": "View History",
+    "copyPath": "Copy Path",
+    "noContent": "Select a file to view its content",
+    "loading": "Loading..."
+  },
+  "tabBar": {
+    "closeTab": "Close tab",
+    "unsavedChanges": "Has uncommitted changes"
+  },
+  "dragDrop": {
+    "merge": "Merge",
+    "rebase": "Rebase",
+    "cherryPick": "Cherry Pick",
+    "push": "Push to Remote",
+    "dropHere": "Drop here"
+  },
+  "toolbar": {
+    "undo": "Undo",
+    "redo": "Redo",
+    "undoAction": "Undo: {{action}}",
+    "redoAction": "Redo: {{action}}",
+    "toggleTerminal": "Toggle Terminal",
+    "toggleFullscreen": "Toggle Fullscreen",
+    "pushRejected": "Push Rejected",
+    "pushRejectedDesc": "The remote branch has new commits. Choose an action:",
+    "pullThenPush": "Pull then Push",
+    "forcePush": "Force Push",
+    "hardResetTitle": "Hard Reset",
+    "hardResetDesc": "Hard reset will discard all uncommitted changes. Continue?",
+    "deleteUnmergedTitle": "Delete Branch",
+    "deleteUnmergedDesc": "This branch has not been merged. Force delete?"
+  },
+  "hostIntegration": {
+    "title": "HOST INTEGRATION",
+    "platform": "Platform",
+    "github": "GitHub",
+    "gitlab": "GitLab",
+    "token": "Personal Access Token",
+    "authenticate": "Authenticate",
+    "authenticated": "Authenticated",
+    "notAuthenticated": "Not authenticated",
+    "logout": "Logout",
+    "pullRequests": "Pull Requests",
+    "noPullRequests": "No pull requests found",
+    "createPr": "Create Pull Request",
+    "prTitle": "Title",
+    "prDescription": "Description",
+    "sourceBranch": "Source Branch",
+    "targetBranch": "Target Branch",
+    "create": "Create",
+    "creating": "Creating...",
+    "open": "Open",
+    "closed": "Closed",
+    "merged": "Merged",
+    "refreshPrs": "Refresh",
+    "loadingPrs": "Loading...",
+    "authError": "Authentication failed",
+    "prCreateError": "Failed to create pull request",
+    "prListError": "Failed to load pull requests"
+  }
+}
