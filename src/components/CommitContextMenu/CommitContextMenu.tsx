@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { CommitInfo } from '../../ipc/types';
-import { classifyNode, getMenuItemsForNode, getLocalBranchName, getRemoteBranchName } from './menuItems';
+import { classifyNode, getMenuItemsForNode } from './menuItems';
 import type { MenuItem } from './menuItems';
 
 export interface CommitContextMenuProps {
@@ -42,9 +42,6 @@ export function CommitContextMenu({
   );
 
   if (!visible) return null;
-
-  const _localBranch = getLocalBranchName(commit.refs);
-  const _remoteBranch = getRemoteBranchName(commit.refs);
 
   return (
     <>

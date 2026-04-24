@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import type { CommitInfo, CommitDetail as CommitDetailType, FileStatus } from '../../ipc/types';
+import type { CommitDetail as CommitDetailType, FileStatus } from '../../ipc/types';
 
 interface Props {
   detail: CommitDetailType | null;
@@ -10,8 +10,8 @@ function formatDate(timestamp: number): string {
   return new Date(timestamp * 1000).toLocaleString();
 }
 
-function statusIcon(status: FileStatus['status']): string {
-  switch (status) {
+function statusIcon(file: FileStatus): string {
+  switch (file.status) {
     case 'Modified': return 'M';
     case 'Staged': return 'S';
     case 'Untracked': return '?';

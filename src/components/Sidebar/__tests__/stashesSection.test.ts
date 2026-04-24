@@ -93,7 +93,7 @@ describe('StashesSection click to view diff (Requirement 21.6)', () => {
     const onSelect = vi.fn();
     const stash = makeStash({ index: 1 });
 
-    const simulatedKey = 'Space';
+    const simulatedKey: string = 'Space';
     if (simulatedKey === 'Enter') {
       onSelect(stash.index);
     }

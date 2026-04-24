@@ -9,7 +9,6 @@ import {
   prStateKey,
   prStateBadgeClass,
   type HostIntegrationSectionProps,
-  type HostPlatform,
 } from '../HostIntegrationSection';
 
 // --- helpers ---

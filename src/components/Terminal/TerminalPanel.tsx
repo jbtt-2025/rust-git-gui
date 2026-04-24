@@ -39,7 +39,7 @@ export function TerminalPanel({ className }: TerminalPanelProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const termRef = useRef<Terminal | null>(null);
   const fitAddonRef = useRef<FitAddon | null>(null);
-  const childRef = useRef<Awaited<ReturnType<Command['spawn']>> | null>(null);
+  const childRef = useRef<Awaited<ReturnType<Command<string>['spawn']>> | null>(null);
   const spawnedPathRef = useRef<string | null>(null);
 
   // Derive the active repo path from the store

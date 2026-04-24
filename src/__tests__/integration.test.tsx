@@ -19,8 +19,6 @@ import type {
   BranchInfo,
   TagInfo,
   StashEntry,
-  SubmoduleInfo,
-  WorktreeInfo,
   FileDiff,
   BlameInfo,
 } from '../ipc/types';
@@ -150,7 +148,8 @@ function setupActiveTab() {
 /** Configure invoke mock to return appropriate data for each command. */
 function setupInvokeMock() {
   const invokeMock = vi.mocked(invoke);
-  invokeMock.mockImplementation(async (cmd: string, _args?: Record<string, unknown>) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  invokeMock.mockImplementation(async (cmd: string, _args?: any) => {
     switch (cmd) {
       case 'list_branches':
         if (_args && (_args as Record<string, unknown>).filter === 'Local') return [MOCK_BRANCH];

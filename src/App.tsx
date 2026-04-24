@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRepoStore, useUiStore, useSettingsStore } from './stores';
 import type { TabState } from './stores';
@@ -17,13 +17,13 @@ import type {
   SubmoduleInfo,
   WorktreeInfo,
   TagInfo,
-  RepositoryState,
   PullRequest,
   CreatePrParams,
   LineRange,
   LogOptions,
 } from './ipc/types';
 import type { HostPlatform } from './components/Sidebar/HostIntegrationSection';
+import type { SearchOptions } from './components/SearchPanel/SearchPanel';
 import {
   TabBar,
   Toolbar,
@@ -302,7 +302,7 @@ function App() {
   }, [activeTabId, refreshAll]);
 
   // ── Search ──
-  const handleSearch = useCallback(async (query: string, _options: Record<string, unknown>) => {
+  const handleSearch = useCallback(async (query: string, _options: SearchOptions) => {
     if (!activeTabId || !query.trim()) {
       setSearchResults([]);
       return;

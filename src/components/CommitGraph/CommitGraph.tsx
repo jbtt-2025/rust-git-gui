@@ -1,7 +1,7 @@
 import { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { DagLayout, CommitInfo, CommitDetail as CommitDetailType } from '../../ipc/types';
-import { renderDag, hitTestNode, totalHeight, ROW_HEIGHT } from './dagRenderer';
+import { renderDag, hitTestNode, totalHeight } from './dagRenderer';
 import { CommitDetailPanel } from './CommitDetail';
 
 export interface CommitGraphProps {
