@@ -1,9 +1,9 @@
 [package]
-name = "git-gui"
+name = "rust-git-gui"
 version = "0.1.0"
 description = "A cross-platform Git GUI client"
 authors = ["kiro"]
-edition = "2026"
+edition = "2021"
 
 [lib]
 name = "git_gui_lib"
