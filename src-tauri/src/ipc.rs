@@ -3,7 +3,7 @@
 use std::path::PathBuf;
 use std::sync::{Arc, Mutex};
 
-use tauri::{AppHandle, Emitter, State};
+use tauri::{AppHandle, Emitter, Manager, State};
 
 use crate::error::IpcError;
 use crate::git_core::ProgressSender;
@@ -164,6 +164,92 @@ pub async fn get_recent_repos(
 ) -> Result<Vec<RepoEntry>, IpcError> {
     let mgr = state.repo_manager.lock().unwrap();
     Ok(mgr.recent_repos().iter().cloned().collect())
+}
+
+// === Recent Repos Persistence Commands ===
+
+#[tauri::command]
+pub async fn save_recent_repos(
+    state: State<'_, AppState>,
+    app: AppHandle,
+) -> Result<(), IpcError> {
+    let repos: Vec<RepoEntry> = {
+        let mgr = state.repo_manager.lock().unwrap();
+        mgr.recent_repos().iter().cloned().collect()
+    };
+
+    let app_data_dir = app.path().app_data_dir().map_err(|e| IpcError {
+        error_type: "Io".to_string(),
+        message: format!("Failed to resolve app data directory: {}", e),
+    })?;
+
+    std::fs::create_dir_all(&app_data_dir).map_err(|e| IpcError {
+        error_type: "Io".to_string(),
+        message: format!("Failed to create app data directory: {}", e),
+    })?;
+
+    let file_path = app_data_dir.join("recent_repos.json");
+    let json = serde_json::to_string_pretty(&repos).map_err(|e| IpcError {
+        error_type: "Io".to_string(),
+        message: format!("Failed to serialize recent repos: {}", e),
+    })?;
+
+    std::fs::write(&file_path, json).map_err(|e| IpcError {
+        error_type: "Io".to_string(),
+        message: format!("Failed to write recent_repos.json: {}", e),
+    })?;
+
+    Ok(())
+}
+
+#[tauri::command]
+pub async fn load_recent_repos(
+    state: State<'_, AppState>,
+    app: AppHandle,
+) -> Result<Vec<RepoEntry>, IpcError> {
+    let app_data_dir = app.path().app_data_dir().map_err(|e| IpcError {
+        error_type: "Io".to_string(),
+        message: format!("Failed to resolve app data directory: {}", e),
+    })?;
+
+    let file_path = app_data_dir.join("recent_repos.json");
+
+    if !file_path.exists() {
+        return Ok(Vec::new());
+    }
+
+    let contents = std::fs::read_to_string(&file_path).map_err(|e| IpcError {
+        error_type: "Io".to_string(),
+        message: format!("Failed to read recent_repos.json: {}", e),
+    })?;
+
+    let repos: Vec<RepoEntry> = serde_json::from_str(&contents).map_err(|e| IpcError {
+        error_type: "Io".to_string(),
+        message: format!("Failed to deserialize recent_repos.json: {}", e),
+    })?;
+
+    // Load into RepositoryManager's in-memory state
+    {
+        let mut mgr = state.repo_manager.lock().unwrap();
+        mgr.set_recent_repos(repos.clone().into());
+    }
+
+    Ok(repos)
+}
+
+#[tauri::command]
+pub async fn remove_recent_repo(
+    path: String,
+    state: State<'_, AppState>,
+    app: AppHandle,
+) -> Result<(), IpcError> {
+    {
+        let mut mgr = state.repo_manager.lock().unwrap();
+        mgr.remove_recent_repo(&path);
+    }
+
+    // Persist the updated list
+    save_recent_repos(state, app).await
 }
 
 #[tauri::command]

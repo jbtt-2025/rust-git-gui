@@ -40,6 +40,7 @@ import {
   TerminalPanel,
   SettingsPanel,
   BranchDragProvider,
+  WelcomePage,
 } from './components';
 import { useHotkeys, useSubmoduleUpdates } from './hooks';
 
@@ -628,14 +629,7 @@ function App() {
 
   // ── Render ──
   if (!activeTabId || !activeTab) {
-    return (
-      <div className="app-container app-empty">
-        <h1 className="text-2xl font-bold text-center opacity-60">
-          {t('app.title')}
-        </h1>
-        <p className="text-center opacity-40 mt-2">{t('app.openRepo')}</p>
-      </div>
-    );
+    return <WelcomePage />;
   }
 
   return (

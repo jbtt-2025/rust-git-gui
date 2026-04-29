@@ -91,6 +91,19 @@ impl RepositoryManager {
         &self.recent_repos
     }
 
+    /// Remove a recent repo entry by path.
+    /// Returns true if an entry was removed, false if no matching entry was found.
+    pub fn remove_recent_repo(&mut self, path: &str) -> bool {
+        let before = self.recent_repos.len();
+        self.recent_repos.retain(|e| e.path != path);
+        self.recent_repos.len() < before
+    }
+
+    /// Replace the entire recent repos list (used when loading from disk).
+    pub fn set_recent_repos(&mut self, repos: VecDeque<RepoEntry>) {
+        self.recent_repos = repos;
+    }
+
     /// Get the current state of a repository.
     pub fn repo_status(&self, tab_id: &TabId) -> Result<RepositoryState, GitError> {
         let repo = self.repos.get(tab_id).ok_or_else(|| GitError::RepositoryNotFound {

@@ -192,6 +192,11 @@ function setupInvokeMock() {
       case 'push_remote':
       case 'close_repository':
         return undefined;
+      case 'load_recent_repos':
+        return [];
+      case 'save_recent_repos':
+      case 'remove_recent_repo':
+        return undefined;
       default:
         return undefined;
     }
@@ -216,8 +221,8 @@ beforeEach(() => {
 describe('App layout integration', () => {
   it('renders empty state when no tab is active', () => {
     render(<App />);
-    expect(screen.getByText('Git GUI')).toBeTruthy();
-    expect(screen.getByText(/open a repository/i)).toBeTruthy();
+    expect(screen.getByText('Welcome')).toBeTruthy();
+    expect(screen.getByText(/open, clone, or create a repository/i)).toBeTruthy();
   });
 
   it('renders full layout when a tab is active', async () => {

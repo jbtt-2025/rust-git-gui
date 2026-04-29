@@ -13,6 +13,7 @@ use modules::{FileWatcher, RepositoryManager, UndoEngine};
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
+        .plugin(tauri_plugin_dialog::init())
         .manage(AppState {
             repo_manager: Mutex::new(RepositoryManager::new()),
             file_watcher: Mutex::new(FileWatcher::new()),
@@ -24,6 +25,9 @@ pub fn run() {
             ipc::init_repository,
             ipc::close_repository,
             ipc::get_recent_repos,
+            ipc::save_recent_repos,
+            ipc::load_recent_repos,
+            ipc::remove_recent_repo,
             ipc::get_repo_status,
             ipc::get_commit_log,
             ipc::get_commit_detail,

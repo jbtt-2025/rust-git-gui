@@ -45,6 +45,12 @@ export const gitApi = {
     invoke<void>('close_repository', { tabId }),
   getRecentRepos: () =>
     invoke<RepoEntry[]>('get_recent_repos'),
+  saveRecentRepos: () =>
+    invoke<void>('save_recent_repos'),
+  loadRecentRepos: () =>
+    invoke<RepoEntry[]>('load_recent_repos'),
+  removeRecentRepo: (path: string) =>
+    invoke<void>('remove_recent_repo', { path }),
   getRepoStatus: (tabId: TabId) =>
     invoke<RepositoryState>('get_repo_status', { tabId }),
 

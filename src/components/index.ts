@@ -40,3 +40,5 @@ export { SettingsPanel } from './Settings';
 export type { SettingsPanelProps } from './Settings';
 export { BranchDragProvider, useBranchDrag, BranchDropTarget, DragActionMenu } from './DragDrop';
 export type { BranchDragProviderProps, DraggedBranch, DropAction, BranchDropTargetProps, DragActionMenuProps } from './DragDrop';
+export { WelcomePage, ActionBar, RepoSearch, RecentReposList, CloneDialog, filterRepos, validateCloneForm } from './WelcomePage';
+export type { ActionBarProps, RepoSearchProps, RecentReposListProps, CloneDialogProps } from './WelcomePage';
